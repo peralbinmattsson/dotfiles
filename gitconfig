@@ -1,0 +1,7 @@
+[user]
+	name = KO. Mattsson
+	email = karloskar@ponty.se
+[color]
+	ui = auto
+[diff]
+	tool = gvimdiff
