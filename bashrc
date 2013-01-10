@@ -16,7 +16,7 @@ else
     KO_USER_COLOR=$KO_PINK_COLOR
 fi
 
-KO_VC_PROMPT=$' on \033[34m%n\033[00m:\033[00m%[unknown]b\033[32m%m%u'
+KO_VC_PROMPT=$'on \033[34m%n\033[00m:\033[00m%[unknown]b\033[32m%m%u'
 
 ko_vcprompt() {
     vcprompt -f "$KO_VC_PROMPT"
