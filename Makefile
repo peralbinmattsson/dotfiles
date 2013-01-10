@@ -3,7 +3,7 @@ install: install-vim install-bash install-bash install-tmux done
 PWD_INIT=${PWD}
 
 install-vim:
-	rm -f ~/.vim ~/.vimrc
+	rm -rf ~/.vim ~/.vimrc
 	ln -s ${PWD_INIT}/vim ~/.vim
 	ln -s ~/.vim/vimrc ~/.vimrc
 
