@@ -28,7 +28,7 @@ PS1='\n\e${KO_USER_COLOR}\u \e${KO_GRAY_COLOR}at \
 \$ '
 
 # TMUX
-alias tmux="TERM=screen-256color-bce tmux"
+alias tmux="TERM=screen-256color tmux"
 
 # The rest is from a stock ubuntu .bashrc -->
 #
@@ -72,4 +72,4 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-source ~/bin/bashmarks.sh
+source ~/.local/bin/bashmarks.sh
