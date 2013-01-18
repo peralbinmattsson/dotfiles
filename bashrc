@@ -16,7 +16,7 @@ else
     KO_USER_COLOR=$KO_PINK_COLOR
 fi
 
-KO_VC_PROMPT=$'on \033[34m%n\033[00m:\033[00m%[unknown]b\033[32m%m%u'
+KO_VC_PROMPT=$'on \033[34m%n\033[00m:\033[00m%b\033[32m%m%u'
 
 ko_vcprompt() {
     vcprompt -f "$KO_VC_PROMPT"
@@ -29,6 +29,8 @@ PS1='\n\e${KO_USER_COLOR}\u \e${KO_GRAY_COLOR}at \
 
 # TMUX
 alias tmux="TERM=screen-256color tmux"
+
+alias sysupd="sudo apt-get update && sudo apt-get upgrade"
 
 # The rest is from a stock ubuntu .bashrc -->
 #
