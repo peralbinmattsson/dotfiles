@@ -21,16 +21,15 @@ Bundle 'cschlueter/vim-wombat'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-fugitive'
 Bundle 'tristen/vim-sparkup'
 Bundle 'vim-scripts/php.vim--Garvin'
-Bundle 'sukima/xmledit'
 Bundle 'karloskar/snipmate.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-fugitive'
-Bundle 'jimmyhchan/dustjs.vim'
+Bundle 'sukima/xmledit'
 Bundle 'git://git.wincent.com/command-t.git'
 
 if iCanHazVundle == 0
@@ -129,6 +128,10 @@ endif
 " Better pasting in terminal vim from
 " http://userobsessed.net/tips-and-tricks/2011/05/10/copy-and-paste-in-vim/
 imap <Leader>v  <C-O>:set paste<CR><C-r>*<C-O>:set nopaste<CR>
+
+" Remember foldings and cursor position
+au BufWinLeave * silent! mkview
+au BufWinEnter * silent! loadview
 
 " Command-T
 set wildignore=.git,node_modules/*,*.pyc,*.png,*.jpg

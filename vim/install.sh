@@ -13,6 +13,14 @@ else
   ln -s ~/.vim/bundle/xmledit/ftplugin/xml.vim ~/.vim/bundle/xmledit/ftplugin/html.vim
 fi
 
+# Make xmledit also autocomplete jinja files
+if [ -f ~/.vim/bundle/xmledit/ftplugin/jinja.vim ]
+then
+  echo "jinja.vim symlink already exists"
+else
+  ln -s ~/.vim/bundle/xmledit/ftplugin/xml.vim ~/.vim/bundle/xmledit/ftplugin/jinja.vim
+fi
+
 if [ ! -f ~/.vim/bundle/command-t/ruby/command-t/ext.so ]
 then
 	cd ~/.vim/bundle/command-t/ruby/command-t
