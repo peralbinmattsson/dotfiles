@@ -9,3 +9,7 @@
 	tool = vimdiff
 [difftool]
 	prompt = false
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 700x550+498+1341
+	show-graph = true
