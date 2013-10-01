@@ -21,7 +21,6 @@ Bundle 'cschlueter/vim-wombat'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-fugitive'
 Bundle 'tristen/vim-sparkup'
 Bundle 'vim-scripts/php.vim--Garvin'
 Bundle 'karloskar/snipmate.vim'
@@ -134,7 +133,7 @@ au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
 " Command-T
-set wildignore=.git,node_modules/*,*.pyc,*.png,*.jpg
+set wildignore=.git,node_modules/*,*.pyc,*.png,*.jpg,venv/*
 nnoremap <C-t> :<C-u>CommandT<CR>
 
 " close omnicomplete scratchpad

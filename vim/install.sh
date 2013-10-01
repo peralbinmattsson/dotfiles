@@ -5,6 +5,7 @@ echo "Installing..."
 # Do vundle install, should be handled from within vimrc
 vim +q                                             
 																										  
+ln -sf ~/.vim/bundle/xmledit/ftplugin/xml.vim ~/.vim/bundle/xmledit/ftplugin/html.vim
 # Make xmledit autocomplete jinja files
 if [ -f ~/.vim/bundle/xmledit/ftplugin/jinja.vim ]
 then
