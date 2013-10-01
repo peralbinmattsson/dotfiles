@@ -19,6 +19,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'cschlueter/vim-wombat'
 Bundle 'fholgado/minibufexpl.vim'
+Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tristen/vim-sparkup'
