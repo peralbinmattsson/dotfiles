@@ -77,7 +77,7 @@ set visualbell t_vb=
 set novisualbell
 set autoindent
 if exists('+colorcolumn')
-    set colorcolumn=80
+    set colorcolumn=100
 endif
 
 

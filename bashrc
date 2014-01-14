@@ -32,6 +32,9 @@ alias tmux="TERM=screen-256color tmux"
 
 alias sysupd="sudo apt-get update && sudo apt-get upgrade"
 
+alias grw="grunt watch"
+alias venv=". venv/bin/activate"
+
 # The rest is from a stock ubuntu .bashrc -->
 #
 # don't put duplicate lines in the history. See bash(1) for more options
