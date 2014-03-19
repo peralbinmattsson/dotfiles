@@ -32,9 +32,9 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
 
 if iCanHazVundle == 0
-  echo "Installing Bundles, please ignore key map error messages"
-  echo ""
-  :BundleInstall!
+    echo "Installing Bundles, please ignore key map error messages"
+    echo ""
+    :BundleInstall!
 endif
 
 " NERDTree
@@ -91,12 +91,12 @@ set laststatus=2
 set encoding=utf-8
 
 augroup vimrcs
-	au!
-	au bufwritepost ~/.vimrc
-		\ source ~/.vimrc |
-		\ if exists('g:Powerline_loaded') |
-		\ silent! call Pl#Load() |
-		\ endif
+    au!
+    au bufwritepost ~/.vimrc
+	\ source ~/.vimrc |
+	\ if exists('g:Powerline_loaded') |
+	\ silent! call Pl#Load() |
+	\ endif
 augroup END
 
 set backspace=eol,indent,start
@@ -109,9 +109,9 @@ if has("gui_running")
     set gfn=Ubuntu\ Mono\ 12
     colorscheme wombat
 else
-	" This is console Vim.
-	set t_Co=256
-	colorscheme wombat256
+    " This is console Vim.
+    set t_Co=256
+    colorscheme wombat256
     set timeoutlen=100
 endif
 if $TERM =~ '^screen-256color'
