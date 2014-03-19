@@ -12,7 +12,7 @@ if !filereadable(vundle_readme)
     let iCanHazVundle=0
 endif
 
-set rtp+=~/.vim/bundle/vundle/ 
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
@@ -26,11 +26,10 @@ Bundle 'tristen/vim-sparkup'
 Bundle 'vim-scripts/php.vim--Garvin'
 Bundle 'groenewege/vim-less'
 Bundle 'Glench/Vim-Jinja2-Syntax'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'sukima/xmledit'
 Bundle 'kien/ctrlp.vim'
-"Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'bling/vim-airline'
 
 if iCanHazVundle == 0
   echo "Installing Bundles, please ignore key map error messages"
@@ -47,7 +46,7 @@ let mapleader = ","
 
 " minibufexpl
 let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapCTabSwitchBufs = 1 
+let g:miniBufExplMapCTabSwitchBufs = 1
 nnoremap <C-PageUp> :bprevious!<CR>
 nnoremap <C-PageDown> :bnext!<CR>
 
@@ -85,29 +84,30 @@ if exists('+colorcolumn')
 endif
 
 
-" For Powerline
-let g:Powerline_symbols = 'fancy'
+" For airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme = "powerlineish"
 set laststatus=2
 set encoding=utf-8
 
 augroup vimrcs
 	au!
-	au bufwritepost ~/.vimrc 
+	au bufwritepost ~/.vimrc
 		\ source ~/.vimrc |
 		\ if exists('g:Powerline_loaded') |
 		\ silent! call Pl#Load() |
-		\ endif 
+		\ endif
 augroup END
 
 set backspace=eol,indent,start
 
 " Window size
 if has("gui_running")
-	" GUI is running or is about to start.
-	" Set size.
-	set lines=50 columns=160
+    " GUI is running or is about to start.
+    " Set size.
+    set lines=50 columns=160
     set gfn=Ubuntu\ Mono\ 12
-	colorscheme wombat
+    colorscheme wombat
 else
 	" This is console Vim.
 	set t_Co=256
