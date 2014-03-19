@@ -24,13 +24,13 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tristen/vim-sparkup'
 Bundle 'vim-scripts/php.vim--Garvin'
-Bundle 'karloskar/snipmate.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'sukima/xmledit'
-Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'kien/ctrlp.vim'
+"Bundle 'git://git.wincent.com/command-t.git'
 
 if iCanHazVundle == 0
   echo "Installing Bundles, please ignore key map error messages"
@@ -40,6 +40,10 @@ endif
 
 " NERDTree
 nmap <silent> <F3> :NERDTreeToggle<CR>
+
+" set leader
+let mapleader = ","
+
 
 " minibufexpl
 let g:miniBufExplMapWindowNavVim = 1
@@ -134,9 +138,13 @@ au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
 " Command-T
-set wildignore=.git,node_modules/*,*.pyc,*.png,*.jpg,venv/*
-nnoremap <C-t> :<C-u>CommandT<CR>
+set wildignore=.git,*/node_modules/*,*.pyc,*.png,*.jpg,venv/*
+"nnoremap <C-t> :<C-u>CommandT<CR>
+nnoremap <C-t> :<C-u>CtrlP<CR>
 
 " close omnicomplete scratchpad
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+" close buffer
+nnoremap <leader>c :bp\|:bd #<CR>
