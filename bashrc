@@ -22,10 +22,17 @@ ko_vcprompt() {
     vcprompt -f "$KO_VC_PROMPT"
 }
 
+if [ -f ~/bin/vcprompt ]; then
 PS1='\n\e${KO_USER_COLOR}\u \e${KO_GRAY_COLOR}at \
 \e${KO_ORANGE_COLOR}\h \e${KO_GRAY_COLOR}in \
 \e${KO_GREEN_COLOR}\w \e${KO_GRAY_COLOR}`ko_vcprompt` \e${KO_DEFAULT_COLOR}
 \$ '
+else
+PS1='\n\e${KO_USER_COLOR}\u \e${KO_GRAY_COLOR}at \
+\e${KO_ORANGE_COLOR}\h \e${KO_GRAY_COLOR}in \
+\e${KO_GREEN_COLOR}\w \e${KO_GRAY_COLOR} \e${KO_DEFAULT_COLOR}
+\$ '
+fi
 
 # TMUX
 alias tmux="TERM=screen-256color tmux"
