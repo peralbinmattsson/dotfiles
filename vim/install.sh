@@ -14,11 +14,11 @@ else
   ln -s ~/.vim/bundle/xmledit/ftplugin/html.vim ~/.vim/bundle/xmledit/ftplugin/jinja.vim
 fi
 
-if [ ! -f ~/.vim/bundle/command-t/ruby/command-t/ext.so ]
-then
-	cd ~/.vim/bundle/command-t/ruby/command-t
-	ruby extconf.rb
-	make
-fi
+#if [ ! -f ~/.vim/bundle/command-t/ruby/command-t/ext.so ]
+#then
+#	cd ~/.vim/bundle/command-t/ruby/command-t
+#	ruby extconf.rb
+#	make
+#fi
 																										  
 echo "Done." 
