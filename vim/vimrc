@@ -148,3 +148,6 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " close buffer
 nnoremap <leader>c :bp\|:bd #<CR>
+
+" filetype specific settings
+autocmd Filetype yaml setlocal et ts=2 sw=2 sts=2
