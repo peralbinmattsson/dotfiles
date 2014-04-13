@@ -89,6 +89,20 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = "powerlineish"
 set laststatus=2
 set encoding=utf-8
+" N / I instead of NORMAL / INSERT
+let g:airline_mode_map = {
+      \ '__' : '--',
+      \ 'n' : 'N',
+      \ 'i' : 'I',
+      \ 'R' : 'REPLACE',
+      \ 'c' : 'COMMAND',
+      \ 'v' : 'VISUAL',
+      \ 'V' : 'V-LINE',
+      \ '^V' : 'V-BLOCK',
+      \ 's' : 'SELECT',
+      \ 'S' : 'S-LINE',
+      \ '^S' : 'S-BLOCK',
+\ }
 
 augroup vimrcs
     au!
